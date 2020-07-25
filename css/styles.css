@@ -1,0 +1,398 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'lobster', cursive;
+}
+
+h1 {
+    text-align: center;
+}
+
+.flex-column {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.block {
+    width: 200px;
+    height: 200px;
+    perspective: 600px;
+}
+
+
+.grass {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 0.5s;                /* takes this long to return to the original position */
+    
+}
+
+.grass:hover {
+    transform: rotateX(-20deg) rotateY(45deg);
+    transition: .5s cubic-bezier(.56,-0.33,.36,1.35);            /* takes this long to happen */
+}
+
+.grass-face {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-size: contain;
+
+}
+
+.grass-face-front {
+    background-image: url(../images/dirt-grass.png);
+    image-rendering: pixelated;
+    transform: rotateY(0deg) translateZ(100px);
+}
+
+.grass-face-back {
+    background-image: url(../images/dirt-grass.png);
+    image-rendering: pixelated;
+    transform: rotateY(180deg) translateZ(100px);
+}
+
+.grass-face-top {
+    background-image: url(../images/grass.png);
+    image-rendering: pixelated;
+    transform: rotateX(90deg) translateZ(100px);
+}
+
+.grass-face-bottom {
+    background-image: url(../images/dirt.png);
+    image-rendering: pixelated;
+    transform: rotateX(-90deg) translateZ(100px) ;
+
+}
+
+.grass-face-left {
+    background-image: url(../images/dirt-grass.png);
+    image-rendering: pixelated;
+    transform: rotateY(-90deg) translateZ(100px);
+
+}
+
+.grass-face-right {
+    background-image: url(../images/dirt-grass.png);
+    image-rendering: pixelated;
+    transform: rotateY(90deg) translateZ(100px);
+
+}
+
+/* ========================================================== diamond */
+
+.diamond-face {
+    background-image: url(../images/diamond.png);
+    image-rendering: pixelated;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-size: contain;
+}
+
+.diamond {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 0.5s;                /* takes this long to return to the original position */
+}
+
+.diamond:hover {
+    transform: rotateX(-20deg) rotateY(45deg);
+    transition: .5s cubic-bezier(.56,-0.33,.36,1.35);            /* takes this long to happen */
+}
+
+
+
+.diamond-face-front {
+    background-image: url(../images/diamond.png);
+    transform: rotateY(0deg) translateZ(100px);
+}
+
+.diamond-face-back {
+    background-image: url(../images/diamond.png);
+    transform: rotateY(180deg) translateZ(100px);
+}
+
+.diamond-face-top {
+    background-image: url(../images/diamond.png);
+    transform: rotateX(90deg) translateZ(100px);
+}
+
+.diamond-face-bottom {
+    background-image: url(../images/diamond.png);
+    transform: rotateX(-90deg) translateZ(100px) ;
+
+}
+
+.diamond-face-left {
+    background-image: url(../images/diamond.png);
+    transform: rotateY(-90deg) translateZ(100px);
+
+}
+
+.diamond-face-right {
+    background-image: url(../images/diamond.png);
+    transform: rotateY(90deg) translateZ(100px);
+
+}
+
+/* =========================================================== ice */
+
+.ice-face {
+    background-image: url(../images/ice.png);
+    image-rendering: pixelated;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-size: contain;
+    opacity: .7;
+}
+
+.ice {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 0.5s;                /* takes this long to return to the original position */
+}
+
+.ice:hover {
+    transform: rotateX(-20deg) rotateY(45deg);
+    transition: .5s cubic-bezier(.56,-0.33,.36,1.35);            /* takes this long to happen */
+}
+
+
+
+.ice-face-front {
+    background-image: url(../images/ice.png);
+    transform: rotateY(0deg) translateZ(100px);
+}
+
+.ice-face-back {
+    background-image: url(../images/ice.png);
+    transform: rotateY(180deg) translateZ(100px);
+}
+
+.ice-face-top {
+    background-image: url(../images/ice.png);
+    transform: rotateX(90deg) translateZ(100px);
+}
+
+.ice-face-bottom {
+    background-image: url(../images/ice.png);
+    transform: rotateX(-90deg) translateZ(100px) ;
+
+}
+
+.ice-face-left {
+    background-image: url(../images/ice.png);
+    transform: rotateY(-90deg) translateZ(100px);
+
+}
+
+.ice-face-right {
+    background-image: url(../images/ice.png);
+    transform: rotateY(90deg) translateZ(100px);
+
+}
+
+/* =========================================================== redstone */
+
+.redstone-face {
+
+    background-image: url(../images/redstone.png);
+    image-rendering: pixelated;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-size: contain;
+} 
+.redstone {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 0.5s;                /* takes this long to return to the original position */
+}
+
+.redstone:hover {
+    transform: rotateX(-20deg) rotateY(45deg);
+    transition: .5s cubic-bezier(.56,-0.33,.36,1.35);            /* takes this long to happen */
+}
+
+
+
+.redstone-face-front {
+    background-image: url(../images/redstone.png);
+    transform: rotateY(0deg) translateZ(100px);
+}
+
+.redstone-face-back {
+    background-image: url(../images/redstone.png);
+    transform: rotateY(180deg) translateZ(100px);
+}
+
+.redstone-face-top {
+    background-image: url(../images/redstone.png);
+    transform: rotateX(90deg) translateZ(100px);
+}
+
+.redstone-face-bottom {
+    background-image: url(../images/redstone.png);
+    transform: rotateX(-90deg) translateZ(100px) ;
+
+}
+
+.redstone-face-left {
+    background-image: url(../images/redstone.png);
+    transform: rotateY(-90deg) translateZ(100px);
+
+}
+
+.redstone-face-right {
+    background-image: url(../images/redstone.png);
+    transform: rotateY(90deg) translateZ(100px);
+
+}
+
+/* background-size: contain;    preserves aspect-ratio*/
+
+/* ========================================================== carousel */
+
+.scene {
+    width: 210px;
+    height: 140px;
+    position: relative;
+    perspective: 1000px;
+    border: solid red 1px;
+  }
+  
+  .carousel {
+    display: flex;
+    justify-content: center;  
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+  }
+  
+  .carousel__cell {
+    position: absolute;
+    width: 190px;
+    height: 120px;
+    left: 10px;
+    top: 10px;
+    border: solid black 1px;
+
+  }
+
+.carousel__cell:nth-child(1) { 
+    transform: rotateY(  0deg) translateZ(288px); 
+}
+
+.carousel__cell:nth-child(2) { 
+    transform: rotateY( 40deg) translateZ(288px); 
+}
+
+.carousel__cell:nth-child(3) { 
+    transform: rotateY( 80deg) translateZ(288px); 
+}
+
+.carousel__cell:nth-child(4) { 
+    transform: rotateY(120deg) translateZ(288px); 
+}
+
+.carousel__cell:nth-child(5) { 
+    transform: rotateY(160deg) translateZ(288px); 
+}
+
+.carousel__cell:nth-child(6) { 
+    transform: rotateY(200deg) translateZ(288px); 
+}
+
+.carousel__cell:nth-child(7) { 
+    transform: rotateY(240deg) translateZ(288px); 
+}
+
+.carousel__cell:nth-child(8) { 
+    transform: rotateY(280deg) translateZ(288px); 
+}
+
+.carousel__cell:nth-child(9) { 
+    transform: rotateY(320deg) translateZ(288px); 
+}
+
+/* ============================================================ experimental SVG classes */
+/* "fill" for color values */
+.svg {
+    display: flex;
+    justify-content: space-evenly;
+}
+/* .Y {
+
+}
+
+.U {
+
+}
+
+.O {
+    
+} */
+
+.e_inside {
+    fill: red;
+}
+
+.b_inside {
+    fill: red;
+}
+
+.tube_block {
+    fill: red;
+}
+
+/* cool */
+/* .cool_animate {
+    fill: red;
+    transition: all .5s ease-out;
+}
+.cool_animate:hover {
+    transform: scale(1.3);
+} */
+@keyframes cool {
+    0% {transform:scale(1);}
+    50% {transform:scale(1.3);}
+    100% {transform:scale(1);}
+}
+
+.cool_animate {
+    animation: cool .5s cubic-bezier(.17,-0.31,.8,1.31) infinite;
+}
+
+/* spin animation */
+@keyframes spin {
+    0% {transform:rotate(-360deg);}
+
+}
+.spinner_animate {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes cog {
+    0% {}
+    100% {transform:rotate(60deg);}
+}
+.cog_animate {
+    animation: cog 1s cubic-bezier(.24,-0.32,.72,1.31) infinite;
+}
+
+
